@@ -1,0 +1,132 @@
+Minute: 1, Num of tweets: 352, Current mean: 352.0, Variance: 1.0
+Minute: 2, Num of tweets: 329, Current mean: 340.5, Variance: 0.97
+Minute: 3, Num of tweets: 257, Current mean: 312.67, Variance: 0.82
+Minute: 4, Num of tweets: 197, Current mean: 283.75, Variance: 0.69
+Minute: 5, Num of tweets: 207, Current mean: 268.4, Variance: 0.77
+Minute: 6, Num of tweets: 156, Current mean: 249.67, Variance: 0.62
+Minute: 7, Num of tweets: 137, Current mean: 233.57, Variance: 0.59
+Minute: 8, Num of tweets: 150, Current mean: 223.12, Variance: 0.67
+Minute: 9, Num of tweets: 160, Current mean: 216.11, Variance: 0.74
+Minute: 10, Num of tweets: 124, Current mean: 206.9, Variance: 0.6
+Minute: 11, Num of tweets: 113, Current mean: 198.36, Variance: 0.57
+Minute: 12, Num of tweets: 102, Current mean: 190.33, Variance: 0.54
+Minute: 13, Num of tweets: 104, Current mean: 183.69, Variance: 0.57
+Minute: 14, Num of tweets: 104, Current mean: 178.0, Variance: 0.58
+Minute: 15, Num of tweets: 180, Current mean: 178.13, Variance: 1.01
+Minute: 16, Num of tweets: 143, Current mean: 175.94, Variance: 0.81
+Minute: 17, Num of tweets: 153, Current mean: 174.59, Variance: 0.88
+Minute: 18, Num of tweets: 127, Current mean: 171.94, Variance: 0.74
+Minute: 19, Num of tweets: 150, Current mean: 170.79, Variance: 0.88
+Minute: 20, Num of tweets: 977, Current mean: 211.1, Variance: 4.63, DATA SPIKE
+Minute: 21, Num of tweets: 1858, Current mean: 289.52, Variance: 6.42, DATA SPIKE
+Minute: 22, Num of tweets: 1008, Current mean: 322.18, Variance: 3.13, DATA SPIKE
+Minute: 23, Num of tweets: 724, Current mean: 339.65, Variance: 2.13
+Minute: 24, Num of tweets: 603, Current mean: 350.62, Variance: 1.72
+Minute: 25, Num of tweets: 470, Current mean: 355.4, Variance: 1.32
+Minute: 26, Num of tweets: 414, Current mean: 357.65, Variance: 1.16
+Minute: 27, Num of tweets: 341, Current mean: 357.04, Variance: 0.96
+Minute: 28, Num of tweets: 401, Current mean: 358.61, Variance: 1.12
+Minute: 29, Num of tweets: 357, Current mean: 358.55, Variance: 1.0
+Minute: 30, Num of tweets: 324, Current mean: 357.4, Variance: 0.91
+Minute: 31, Num of tweets: 356, Current mean: 357.35, Variance: 1.0
+Minute: 32, Num of tweets: 228, Current mean: 353.31, Variance: 0.65
+Minute: 33, Num of tweets: 207, Current mean: 348.88, Variance: 0.59
+Minute: 34, Num of tweets: 220, Current mean: 345.09, Variance: 0.64
+Minute: 35, Num of tweets: 194, Current mean: 340.77, Variance: 0.57
+Minute: 36, Num of tweets: 196, Current mean: 336.75, Variance: 0.58
+Minute: 37, Num of tweets: 214, Current mean: 333.43, Variance: 0.64
+Minute: 38, Num of tweets: 217, Current mean: 330.37, Variance: 0.66
+Minute: 39, Num of tweets: 193, Current mean: 326.85, Variance: 0.59
+Minute: 40, Num of tweets: 149, Current mean: 322.4, Variance: 0.46
+Minute: 41, Num of tweets: 145, Current mean: 318.07, Variance: 0.46
+Minute: 42, Num of tweets: 151, Current mean: 314.1, Variance: 0.48
+Minute: 43, Num of tweets: 146, Current mean: 310.19, Variance: 0.47
+Minute: 44, Num of tweets: 151, Current mean: 306.57, Variance: 0.49
+Minute: 45, Num of tweets: 217, Current mean: 304.58, Variance: 0.71
+Minute: 46, Num of tweets: 198, Current mean: 302.26, Variance: 0.66
+Minute: 47, Num of tweets: 178, Current mean: 299.62, Variance: 0.59
+Minute: 48, Num of tweets: 553, Current mean: 304.9, Variance: 1.81
+Minute: 49, Num of tweets: 852, Current mean: 316.06, Variance: 2.7, DATA SPIKE
+Minute: 50, Num of tweets: 620, Current mean: 322.14, Variance: 1.92
+Minute: 51, Num of tweets: 442, Current mean: 324.49, Variance: 1.36
+Minute: 52, Num of tweets: 371, Current mean: 325.38, Variance: 1.14
+Minute: 53, Num of tweets: 358, Current mean: 326.0, Variance: 1.1
+Minute: 54, Num of tweets: 281, Current mean: 325.17, Variance: 0.86
+Minute: 55, Num of tweets: 246, Current mean: 323.73, Variance: 0.76
+Minute: 56, Num of tweets: 216, Current mean: 321.8, Variance: 0.67
+Minute: 57, Num of tweets: 220, Current mean: 320.02, Variance: 0.69
+Minute: 58, Num of tweets: 179, Current mean: 317.59, Variance: 0.56
+Minute: 59, Num of tweets: 160, Current mean: 314.92, Variance: 0.51
+Minute: 60, Num of tweets: 210, Current mean: 313.17, Variance: 0.67
+Minute: 61, Num of tweets: 243, Current mean: 312.02, Variance: 0.78
+Minute: 62, Num of tweets: 251, Current mean: 311.03, Variance: 0.81
+Minute: 63, Num of tweets: 240, Current mean: 309.9, Variance: 0.77
+Minute: 64, Num of tweets: 272, Current mean: 309.31, Variance: 0.88
+Minute: 65, Num of tweets: 266, Current mean: 308.65, Variance: 0.86
+Minute: 66, Num of tweets: 254, Current mean: 307.82, Variance: 0.83
+Minute: 67, Num of tweets: 215, Current mean: 306.43, Variance: 0.7
+Minute: 68, Num of tweets: 153, Current mean: 304.18, Variance: 0.5
+Minute: 69, Num of tweets: 134, Current mean: 301.71, Variance: 0.44
+Minute: 70, Num of tweets: 236, Current mean: 300.77, Variance: 0.78
+Minute: 71, Num of tweets: 240, Current mean: 299.92, Variance: 0.8
+Minute: 72, Num of tweets: 172, Current mean: 298.14, Variance: 0.58
+Minute: 73, Num of tweets: 170, Current mean: 296.38, Variance: 0.57
+Minute: 74, Num of tweets: 154, Current mean: 294.46, Variance: 0.52
+Minute: 75, Num of tweets: 168, Current mean: 292.77, Variance: 0.57
+Minute: 76, Num of tweets: 120, Current mean: 290.5, Variance: 0.41
+Minute: 77, Num of tweets: 109, Current mean: 288.14, Variance: 0.38
+Minute: 78, Num of tweets: 113, Current mean: 285.9, Variance: 0.4
+Minute: 79, Num of tweets: 174, Current mean: 284.48, Variance: 0.61
+Minute: 80, Num of tweets: 164, Current mean: 282.98, Variance: 0.58
+Minute: 81, Num of tweets: 140, Current mean: 281.21, Variance: 0.5
+Minute: 82, Num of tweets: 151, Current mean: 279.62, Variance: 0.54
+Minute: 83, Num of tweets: 146, Current mean: 278.01, Variance: 0.53
+Minute: 84, Num of tweets: 129, Current mean: 276.24, Variance: 0.47
+Minute: 85, Num of tweets: 140, Current mean: 274.64, Variance: 0.51
+Minute: 86, Num of tweets: 177, Current mean: 273.5, Variance: 0.65
+Minute: 87, Num of tweets: 203, Current mean: 272.69, Variance: 0.74
+Minute: 88, Num of tweets: 209, Current mean: 271.97, Variance: 0.77
+Minute: 89, Num of tweets: 215, Current mean: 271.33, Variance: 0.79
+Minute: 90, Num of tweets: 1282, Current mean: 282.56, Variance: 4.54, DATA SPIKE
+Minute: 91, Num of tweets: 1558, Current mean: 296.57, Variance: 5.25, DATA SPIKE
+Minute: 92, Num of tweets: 955, Current mean: 303.73, Variance: 3.14, DATA SPIKE
+Minute: 93, Num of tweets: 693, Current mean: 307.91, Variance: 2.25, DATA SPIKE
+Minute: 94, Num of tweets: 498, Current mean: 309.94, Variance: 1.61
+Minute: 95, Num of tweets: 416, Current mean: 311.05, Variance: 1.34
+Minute: 96, Num of tweets: 320, Current mean: 311.15, Variance: 1.03
+Minute: 97, Num of tweets: 280, Current mean: 310.82, Variance: 0.9
+Minute: 98, Num of tweets: 262, Current mean: 310.33, Variance: 0.84
+Minute: 99, Num of tweets: 258, Current mean: 309.8, Variance: 0.83
+Minute: 100, Num of tweets: 202, Current mean: 308.72, Variance: 0.65
+Minute: 101, Num of tweets: 216, Current mean: 307.8, Variance: 0.7
+Minute: 102, Num of tweets: 1568, Current mean: 320.16, Variance: 4.9, DATA SPIKE
+Minute: 103, Num of tweets: 1631, Current mean: 332.88, Variance: 4.9, DATA SPIKE
+Minute: 104, Num of tweets: 1199, Current mean: 341.21, Variance: 3.51, DATA SPIKE
+Minute: 105, Num of tweets: 800, Current mean: 345.58, Variance: 2.31, DATA SPIKE
+Minute: 106, Num of tweets: 614, Current mean: 348.11, Variance: 1.76
+Minute: 107, Num of tweets: 704, Current mean: 351.44, Variance: 2.0
+Minute: 108, Num of tweets: 535, Current mean: 353.14, Variance: 1.51
+Minute: 109, Num of tweets: 488, Current mean: 354.38, Variance: 1.38
+Minute: 110, Num of tweets: 381, Current mean: 354.62, Variance: 1.07
+Minute: 111, Num of tweets: 367, Current mean: 354.73, Variance: 1.03
+Minute: 112, Num of tweets: 682, Current mean: 357.65, Variance: 1.91
+Minute: 113, Num of tweets: 1388, Current mean: 366.77, Variance: 3.78, DATA SPIKE
+Minute: 114, Num of tweets: 1233, Current mean: 374.37, Variance: 3.29, DATA SPIKE
+Minute: 115, Num of tweets: 1031, Current mean: 380.08, Variance: 2.71, DATA SPIKE
+Minute: 116, Num of tweets: 908, Current mean: 384.63, Variance: 2.36, DATA SPIKE
+Minute: 117, Num of tweets: 778, Current mean: 387.99, Variance: 2.01
+Minute: 118, Num of tweets: 658, Current mean: 390.28, Variance: 1.69
+Minute: 119, Num of tweets: 568, Current mean: 391.77, Variance: 1.45
+Minute: 120, Num of tweets: 525, Current mean: 392.88, Variance: 1.34
+Minute: 121, Num of tweets: 514, Current mean: 393.88, Variance: 1.3
+Minute: 122, Num of tweets: 483, Current mean: 394.61, Variance: 1.22
+Minute: 123, Num of tweets: 461, Current mean: 395.15, Variance: 1.17
+Minute: 124, Num of tweets: 434, Current mean: 395.47, Variance: 1.1
+Minute: 125, Num of tweets: 432, Current mean: 395.76, Variance: 1.09
+Minute: 126, Num of tweets: 389, Current mean: 395.71, Variance: 0.98
+Minute: 127, Num of tweets: 385, Current mean: 395.62, Variance: 0.97
+Minute: 1, Num of tweets: 7, Current mean: 7.0, Variance: 1.0
+Minute: 2, Num of tweets: 7, Current mean: 7.0, Variance: 1.0
+Minute: 3, Num of tweets: 5, Current mean: 6.33, Variance: 0.79
+Minute: 4, Num of tweets: 6, Current mean: 6.25, Variance: 0.96
+Minute: 5, Num of tweets: 7, Current mean: 6.4, Variance: 1.09
