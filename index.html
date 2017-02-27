@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<body>
+
+		<div>
+			<button id="startBtn" type="button">Start graphing</button>
+			<button id="stopBtn" type="button">Stop graphing</button>
+		</div>
+		<div>
+			<canvas id="myChart" width="400" height="50"></canvas>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.js"></script>
+		<script>
+			var ctx = document.getElementById("myChart");
+			ctx.style.backgroundColor = "rgba(51,62,85,255)";
+			var myChart = new Chart(ctx, {
+				type: 'bar',
+				data: {
+					labels: ["00:01", "00:02", "00:03", "00:04", "00:05", "00:06","00:01", "00:02", "00:03", "00:04"],
+					datasets: [{
+						data: [1,5,3,5,2,3,9,4,3,2]
+					}]
+				},
+				options: {
+					scales: {
+						yAxes: [{
+							display: false,
+							ticks: {
+								beginAtZero: true
+							}
+						}],
+						xAxes: [{
+							barPercentage: 1.0,
+							categoryPercentage: 1.0
+						}]
+					},
+					legend: {
+						display: false
+					},
+					elements: {
+						rectangle: {
+							backgroundColor: "rgba(38, 226, 173, 1)"
+						}
+					},
+					title: {
+						display: true,
+						text: "Twitter Velocity Graph",
+						fontColor: "rgba(216, 173, 40, 1)"
+					}
+				}
+			});
+		</script>
+		<!- <script src="graphing.js"></script>
+
+	</body>
+</html>
