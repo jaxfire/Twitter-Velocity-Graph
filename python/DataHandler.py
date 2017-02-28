@@ -31,10 +31,10 @@ class DataHandler(object):
             spike = True
 
         # create the raw data string
-        raw_text = str(self.tweet_counter[length - 1])
+        raw_text = str(self.tweet_counter[length - 1]) + ","
 
         # create the verbose string
-        verbose_text = "Minute: " + str(length) + ", Num of tweets: " + str(self.tweet_counter[length - 1])\
+        verbose_text = "Minute: " + str(length - 1) + ", Num of tweets: " + str(self.tweet_counter[length - 1])\
                         + ", Current mean: " + str(average) + ", Variance: " + str(variance_from_average)
 
         # append some notifying text if the data is spiking
@@ -44,10 +44,13 @@ class DataHandler(object):
         else:
             raw_text += "0"
 
+        if length > 1:
+            raw_text = "/" + raw_text
+
         # write to the raw data and verbose files
         with open("python\\match_data_verbose.txt", "a") as verbose, open("python\\match_data_raw.txt", "a") as raw:
             verbose.write(verbose_text + "\n")
-            raw.write(raw_text + "\n")
+            raw.write(raw_text)
 
         # for live results
         print(verbose_text)
