@@ -25,11 +25,6 @@ class DataHandler(object):
         # calculate it's variance from the average
         variance_from_average = round(current_value / average, 2)
 
-        # check for a spike in the data
-        spike = False
-        if current_value > average * self.spike_qualifier:
-            spike = True
-
         # create the raw data string
         raw_text = str(self.tweet_counter[length - 1]) + ","
 
@@ -38,7 +33,7 @@ class DataHandler(object):
                         + ", Current mean: " + str(average) + ", Variance: " + str(variance_from_average)
 
         # append some notifying text if the data is spiking
-        if spike:
+        if current_value > average * self.spike_qualifier:
             verbose_text += ", DATA SPIKE"
             raw_text += "1"
         else:

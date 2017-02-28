@@ -1,5 +1,4 @@
-var startBtn = document.getElementById("startBtn");
-var stopBtn = document.getElementById("stopBtn");
+var stopStartBtn = document.getElementById("stopStart");
 
 var intervalHandle;
 			
@@ -7,18 +6,30 @@ var tweetCounts = [];
 var dataSpikes = [];
 var labelData = [];
 
+var ctx = document.getElementById("myChart");
+ctx.style.backgroundColor = "rgba(51,62,85,255)";
+
+var myChart;
+
+var running;
+
 renderChart();
 
-startBtn.onclick = function() {
-
-	intervalHandle = setInterval(getMatchData, 5000); //Debugging
-	//intervalHandle = setInterval(getMatchData, 60000); //Real
-  
-};
-
-stopBtn.onclick = function() {
-
-	clearInterval(intervalHandle);
+stopStartBtn.onclick = function() {
+    
+    var elem = stopStartBtn.firstChild;
+    
+    if (running){
+        running = false;
+        clearInterval(intervalHandle);
+        elem.data = "Start Chart";
+    } 
+    else{
+        running = true;
+        intervalHandle = setInterval(getMatchData, 5000); //Debugging
+	    //intervalHandle = setInterval(getMatchData, 60000); //Real
+        elem.data = "Stop Chart";
+     }
   
 };
 
@@ -45,16 +56,13 @@ function getMatchData(){
                
             }
             
-            console.log(tweetCounts);
             tweetCounts = tempCount;
             dataSpikes = tempSpike;
             labelData = tempLabels;
                         
             renderChart();
 			
-		} else {
-            console.log(this.readyState + ", " + this.status);
-        }
+		}
 		
 	};
   
@@ -65,11 +73,7 @@ function getMatchData(){
 
 function renderChart(){
     
-    var ctx = document.getElementById("myChart");
-    
-    ctx.style.backgroundColor = "rgba(51,62,85,255)";
-    
-    var myChart = new Chart(ctx, {
+    myChart = new Chart(ctx, {
         
         type: 'bar',
         data: {
@@ -87,6 +91,12 @@ function renderChart(){
                     }
                 }],
                 xAxes: [{
+                    gridLines: {
+                        display: false,
+                        drawOnChartArea: false,
+                        lineWidth: 0,
+                        fontColor: "rgba(255, 255, 255, 1)"
+                    },
                     barPercentage: 1.0,
                     categoryPercentage: 1.0
                 }]
@@ -103,10 +113,26 @@ function renderChart(){
                 display: true,
                 text: "Twitter Velocity Graph",
                 fontColor: "rgba(216, 173, 40, 1)"
+            },
+            animation: {
+                duration: 0
+            },
+            tooltips: {
+                enabled: false
             }
         }
     });
+    
+    /*
+    //Issue accessing the individual bars 
+    for(var i = 0; i < dataSpikes.length; i++){
+        if(dataSpikes[i] == 1){
+            myChart.datasets[0].bars[0].fillColor = "rgba(255,0,0,255)";
+            myChart.update();
+        }
+    }*/
 }
+
 
 function formatMins(mins){
     
