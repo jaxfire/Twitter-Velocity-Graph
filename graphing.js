@@ -1,4 +1,5 @@
 var stopStartBtn = document.getElementById("stopStart");
+var tweetText = document.getElementById("tweets");
 
 var intervalHandle;
 			
@@ -53,6 +54,9 @@ function getLiveData(){
                 tempCount[i] = countSpikeSplit[0];
                 if(countSpikeSplit[1] == 1){
                     barColors[i] = "rgba(244, 60, 86, 1)";
+                    //Update the latest tweets
+                    updateTweetText();
+                    
                 } else{
                     barColors[i] = "rgba(38, 226, 173, 1)";
                 }
@@ -70,6 +74,25 @@ function getLiveData(){
 	};
   
 	xhttp.open("GET", "python/match_data_raw.txt", true);
+	xhttp.send();
+	
+}
+
+function updateTweetText(){
+
+	var xhttp = new XMLHttpRequest();
+	
+	xhttp.onreadystatechange = function() {
+  
+		if (this.readyState == 4 && this.status == 200) {
+            
+            tweetText.innerHTML = this.responseText;
+			
+		}
+		
+	};
+  
+	xhttp.open("GET", "python/latest_tweets.txt", true);
 	xhttp.send();
 	
 }

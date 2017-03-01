@@ -5,9 +5,10 @@ class DataHandler(object):
 
     tweet_counter = []
 
-    spike_qualifier = 2.2
+    spike_qualifier = 1.2  # Debug
+    # spike_qualifier = 2.2 # Real
 
-    def update(self, latest_velocity):
+    def update(self, latest_velocity, latest_tweets):
 
         self.tweet_counter.append(latest_velocity)
 
@@ -18,9 +19,6 @@ class DataHandler(object):
 
         # get the current minute's value
         current_value = self.tweet_counter[len(self.tweet_counter) - 1]
-
-        # Zero value not allowed to avoid 0/0 error
-        # current_value = 0.01 if current_value == 0 else current_value
 
         # calculate it's variance from the average
         # If the value is zero then it cannot possible be a spike in the data and we avoid a zero / zero error
@@ -40,6 +38,25 @@ class DataHandler(object):
         if current_value > average * self.spike_qualifier:
             verbose_text += ", DATA SPIKE"
             raw_text += "1"
+
+            # write the latest selection of tweets
+            with open("python\\latest_tweets.txt", "w") as tweets:
+                for line in latest_tweets:
+
+                    # slice the relevant information - the actual message of the the tweet
+                    start_index = line.index('"text"') + 8
+                    dtr_index = line.find(',"display_text_range"')
+                    source_index = line.find(',"source"')
+
+                    if -1 < dtr_index < source_index:
+                        end_index = dtr_index
+                    else:
+                        end_index = source_index
+
+                    actual_tweet = line[start_index:end_index]
+                    print(actual_tweet)
+                    tweets.write(actual_tweet + "<br>")
+
         else:
             raw_text += "0"
 
@@ -47,7 +64,7 @@ class DataHandler(object):
             raw_text = "/" + raw_text
 
         # write to the raw data and verbose files
-        with open("python\\match_data_verbose.txt", "a") as verbose, open("python\\match_data_raw.txt", "a") as raw:
+        with open("python\\match_data_verbose.txt", "a") as verbose, open("python\\match_data_raw.txt", "a")as raw:
             verbose.write(verbose_text + "\n")
             raw.write(raw_text)
 
