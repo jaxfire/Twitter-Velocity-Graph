@@ -83,7 +83,8 @@ function renderChart(){
             labels: labelData,  
             datasets: [{
                 backgroundColor: barColors,
-                data: tweetCounts
+                data: tweetCounts,
+                hoverBackgroundColor: "rgba(255,255,255,0.5)"
             }]
         },
         options: {
@@ -101,8 +102,9 @@ function renderChart(){
                         lineWidth: 0,
                         fontColor: "rgba(255, 255, 255, 1)"
                     },
+                    categoryPercentage: 1.0,
                     barPercentage: 1.0,
-                    categoryPercentage: 1.0
+                    //barThickness: 5,
                 }]
             },
             legend: {
@@ -127,7 +129,10 @@ function renderChart(){
                         }
                     }
                 }
-            }
+            }/*,
+            hover: {
+                mode: false
+            }*/
         }
     });
 }
