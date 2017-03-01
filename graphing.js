@@ -3,7 +3,7 @@ var stopStartBtn = document.getElementById("stopStart");
 var intervalHandle;
 			
 var tweetCounts = [];
-var dataSpikes = [];
+var barColors = [];
 var labelData = [];
 
 var ctx = document.getElementById("twitter_chart");
@@ -45,20 +45,22 @@ function getLiveData(){
             var individualElements = this.responseText.split("/");
             
             var tempCount = [];
-            var tempSpike = [];
             var tempLabels = [];
             
             for(var i = 0; i < individualElements.length; i++){
                 
                 var countSpikeSplit = individualElements[i].split(",");               
                 tempCount[i] = countSpikeSplit[0];
-                tempSpike[i] = countSpikeSplit[1];
+                if(countSpikeSplit[1] == 1){
+                    barColors[i] = "rgba(244, 60, 86, 1)";
+                } else{
+                    barColors[i] = "rgba(38, 226, 173, 1)";
+                }
                 tempLabels[i] = formatMins(i);
                
             }
             
             tweetCounts = tempCount;
-            dataSpikes = tempSpike;
             labelData = tempLabels;
                         
             renderChart();
@@ -78,8 +80,9 @@ function renderChart(){
         
         type: 'bar',
         data: {
-            labels: labelData,
+            labels: labelData,  
             datasets: [{
+                backgroundColor: barColors,
                 data: tweetCounts
             }]
         },
@@ -104,11 +107,6 @@ function renderChart(){
             },
             legend: {
                 display: false
-            },
-            elements: {
-                rectangle: {
-                    backgroundColor: "rgba(38, 226, 173, 1)"
-                }
             },
             title: {
                 display: true,
