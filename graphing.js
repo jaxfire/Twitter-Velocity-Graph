@@ -130,15 +130,6 @@ function renderChart(){
             }
         }
     });
-    
-    /*
-    //Issue accessing the individual bars 
-    for(var i = 0; i < dataSpikes.length; i++){
-        if(dataSpikes[i] == 1){
-            myChart.datasets[0].bars[0].fillColor = "rgba(255,0,0,255)";
-            myChart.update();
-        }
-    }*/
 }
 
 
