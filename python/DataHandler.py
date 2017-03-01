@@ -6,7 +6,7 @@ class DataHandler(object):
     tweet_counter = []
 
     spike_qualifier = 1.2  # Debug
-    # spike_qualifier = 2.2 # Real
+    # spike_qualifier = 2.2  # Real
 
     def update(self, latest_velocity, latest_tweets):
 
