@@ -1,10 +1,10 @@
 import threading
 
-from Authoriser import Authoriser
-from TweetListener import TweetListener
 from tweepy import Stream
 
+from python.Authoriser import Authoriser
 from python.DataHandler import DataHandler
+from python.TweetListener import TweetListener
 
 authoriser = Authoriser()
 
@@ -12,14 +12,16 @@ tweet_listener = TweetListener()
 
 data_handler = DataHandler()
 
-first_run = True
+tick_time = 5.0  # Debug is 5 seconds, use 1 minute for real implementation
 
+hash_tags = ['#trump']
 
-def minute_tick():
-    threading.Timer(5.0, minute_tick).start()
-    data_handler.add_data(tweet_listener.on_tick())
+# Recursive timer 'tick'
+def on_tick():
+    threading.Timer(5.0, on_tick).start()
+    data_handler.update(tweet_listener.on_tick())
 
-threading.Timer(5.0, minute_tick).start()
+threading.Timer(5.0, on_tick).start()
 
 twitter_stream = Stream(authoriser.get_auth(), tweet_listener)
-twitter_stream.filter(track=['#trump'])
+twitter_stream.filter(track=hash_tags)

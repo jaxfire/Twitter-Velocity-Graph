@@ -6,7 +6,7 @@ var tweetCounts = [];
 var dataSpikes = [];
 var labelData = [];
 
-var ctx = document.getElementById("myChart");
+var ctx = document.getElementById("twitter_chart");
 ctx.style.backgroundColor = "rgba(51,62,85,255)";
 
 var myChart;
@@ -15,6 +15,7 @@ var running;
 
 renderChart();
 
+//Toggle the graphing functionality on/off
 stopStartBtn.onclick = function() {
     
     var elem = stopStartBtn.firstChild;
@@ -26,14 +27,14 @@ stopStartBtn.onclick = function() {
     } 
     else{
         running = true;
-        intervalHandle = setInterval(getMatchData, 5000); //Debugging
-	    //intervalHandle = setInterval(getMatchData, 60000); //Real
+        intervalHandle = setInterval(getLiveData, 5000); //Debugging 5 seconds
+	    //intervalHandle = setInterval(getLiveData, 60000); //Real 1 minute
         elem.data = "Stop Chart";
      }
   
 };
 
-function getMatchData(){
+function getLiveData(){
 
 	var xhttp = new XMLHttpRequest();
 	
@@ -41,17 +42,17 @@ function getMatchData(){
   
 		if (this.readyState == 4 && this.status == 200) {
             
-            var unsplitData = this.responseText.split("/");
+            var individualElements = this.responseText.split("/");
             
             var tempCount = [];
             var tempSpike = [];
             var tempLabels = [];
             
-            for(var i = 0; i < unsplitData.length; i++){
+            for(var i = 0; i < individualElements.length; i++){
                 
-                var splitData = unsplitData[i].split(",");               
-                tempCount[i] = splitData[0];
-                tempSpike[i] = splitData[1];
+                var countSpikeSplit = individualElements[i].split(",");               
+                tempCount[i] = countSpikeSplit[0];
+                tempSpike[i] = countSpikeSplit[1];
                 tempLabels[i] = formatMins(i);
                
             }
@@ -119,6 +120,15 @@ function renderChart(){
             },
             tooltips: {
                 enabled: false
+            },
+            plotOptions: {
+                series: {
+                    states: {
+                        hover: {
+                            enabled: false
+                        }
+                    }
+                }
             }
         }
     });
