@@ -2,9 +2,9 @@ import threading
 
 from tweepy import Stream
 
-from python.Authoriser import Authoriser
-from python.DataHandler import DataHandler
-from python.TweetListener import TweetListener
+from Authoriser import Authoriser
+from DataHandler import DataHandler
+from TweetListener import TweetListener
 
 authoriser = Authoriser()
 
