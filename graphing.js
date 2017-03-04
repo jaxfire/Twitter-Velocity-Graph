@@ -73,7 +73,7 @@ function getLiveData(){
 		
 	};
   
-	xhttp.open("GET", "python/match_data_raw.txt", true);
+	xhttp.open("GET", "match_data_raw.txt", true);
 	xhttp.send();
 	
 }
@@ -92,7 +92,7 @@ function updateTweetText(){
 		
 	};
   
-	xhttp.open("GET", "python/latest_tweets.txt", true);
+	xhttp.open("GET", "latest_tweets.txt", true);
 	xhttp.send();
 	
 }
@@ -107,7 +107,7 @@ function renderChart(){
             datasets: [{
                 backgroundColor: barColors,
                 data: tweetCounts,
-                hoverBackgroundColor: "rgba(255,255,255,0.5)"
+                hoverBackgroundColor: "rgba(255,255,255,0.75)"
             }]
         },
         options: {

@@ -3,8 +3,8 @@ import threading
 from tweepy import Stream
 
 from Authoriser import Authoriser
-from DataHandler import DataHandler
 from TweetListener import TweetListener
+from DataHandler import DataHandler
 
 authoriser = Authoriser()
 

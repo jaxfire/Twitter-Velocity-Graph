@@ -1,0 +1,30 @@
+body {
+    background-color: grey;
+}
+
+#stopStart {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+#twitter_chart {
+    border-style: solid;
+    border-width: 2px;
+    margin-bottom: 10px;
+}
+
+#tweet_feed {
+    margin: auto;
+    width: 65%;
+    font-family: "Arial", sans-serif;
+    font-size: 0.6eml;
+    border-style: solid;
+    border-width: 2px;
+    background-color: ghostwhite;
+    padding: 10px;
+}
