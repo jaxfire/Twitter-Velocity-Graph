@@ -16,7 +16,7 @@ var running;
 
 renderChart();
 
-//Toggle the graphing functionality on/off
+// Toggle the graphing functionality on/off
 stopStartBtn.onclick = function() {
     
     var elem = stopStartBtn.firstChild;
@@ -28,14 +28,15 @@ stopStartBtn.onclick = function() {
     } 
     else{
         running = true;
-        intervalHandle = setInterval(getLiveData, 5000); //Debugging 5 seconds
-	    //intervalHandle = setInterval(getLiveData, 60000); //Real 1 minute
+        intervalHandle = setInterval(parseData, 5000); //Debugging 5 seconds
+	    // intervalHandle = setInterval(parseData, 60000); //Real 1 minute
         elem.data = "Stop Chart";
      }
   
 };
 
-function getLiveData(){
+
+function parseData(){
 
 	var xhttp = new XMLHttpRequest();
 	
@@ -43,30 +44,42 @@ function getLiveData(){
   
 		if (this.readyState == 4 && this.status == 200) {
             
+            // Split the text into each tick's data
             var individualElements = this.responseText.split("/");
             
             var tempCount = [];
             var tempLabels = [];
             
+            // For each tick's data
             for(var i = 0; i < individualElements.length; i++){
                 
-                var countSpikeSplit = individualElements[i].split(",");               
+                //Split the tweet count and spike boolean values
+                var countSpikeSplit = individualElements[i].split(","); 
+                
                 tempCount[i] = countSpikeSplit[0];
+                
+                // If this tick is a spike in the data
                 if(countSpikeSplit[1] == 1){
+                    // Colour the bar red
                     barColors[i] = "rgba(244, 60, 86, 1)";
-                    //Update the latest tweets
+                    // and pdate the latest tweets
                     updateTweetText();
                     
                 } else{
+                    // We use the default green colour
                     barColors[i] = "rgba(38, 226, 173, 1)";
                 }
+                
+                // Format the tick counter into hh:mm format
                 tempLabels[i] = formatMins(i);
                
             }
             
+            // update global variables used by the chart
             tweetCounts = tempCount;
             labelData = tempLabels;
-                        
+            
+            // create a new instance of the chart which uses the latest values
             renderChart();
 			
 		}
@@ -78,6 +91,7 @@ function getLiveData(){
 	
 }
 
+// presents the latest tweets from a spike tick to the user
 function updateTweetText(){
 
 	var xhttp = new XMLHttpRequest();
@@ -97,6 +111,7 @@ function updateTweetText(){
 	
 }
 
+// instantiates a new chart
 function renderChart(){
     
     myChart = new Chart(ctx, {
