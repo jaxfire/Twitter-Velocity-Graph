@@ -40,7 +40,7 @@ class DataHandler(object):
             raw_text += "1"
 
             # write the latest selection of tweets
-            with open("python\\latest_tweets.txt", "w") as tweets:
+            with open("latest_tweets.txt", "w") as tweets:
                 for line in latest_tweets:
 
                     # slice the relevant information - the actual message of the the tweet
@@ -54,7 +54,7 @@ class DataHandler(object):
                         end_index = source_index
 
                     actual_tweet = line[start_index:end_index]
-                    print(actual_tweet)
+                    # print(actual_tweet)
                     tweets.write(actual_tweet + "<br>")
 
         else:
@@ -64,7 +64,7 @@ class DataHandler(object):
             raw_text = "/" + raw_text
 
         # write to the raw data and verbose files
-        with open("python\\match_data_verbose.txt", "a") as verbose, open("python\\match_data_raw.txt", "a")as raw:
+        with open("match_data_verbose.txt", "a") as verbose, open("match_data_raw.txt", "a")as raw:
             verbose.write(verbose_text + "\n")
             raw.write(raw_text)
 
